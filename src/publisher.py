@@ -8,7 +8,11 @@ class Publisher:
         self.logger = Logger()
 
     def publish(self, message, routing_key):
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host=MessagingConstants.HOST))
+
+        params = pika.URLParameters(MessagingConstants.CLOUD_AMPQ_URL)
+        params.socket_timeout = 5
+
+        connection = pika.BlockingConnection(params)
 
         channel = connection.channel()
 

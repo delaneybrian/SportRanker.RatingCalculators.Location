@@ -26,3 +26,16 @@ class MessagingConstants:
     TEAM_RATING_CHANGE = 'ratings.team'
     LOCATION_RATING_CHANGE = 'ratings.location'
     ALL_RATINGS_CHANGE = 'ratings.*'
+
+class TeamConstants:
+    ID = 'Id'
+    NAME = 'Name'
+    SPORT_ID = 'SportId'
+    SPORT_NAME = 'SportName'
+    STATE_ID = 'StateId'
+    STATE_NAME = 'StateName'
+    CITY_ID = 'CityId'
+    CITY_NAME = 'CityName'
+    RATING = 'Rating'
+    EXTERNAL_MAPPINGS = 'ExternalMappings'
+    IMAGE_URL = 'ImageUrl'
