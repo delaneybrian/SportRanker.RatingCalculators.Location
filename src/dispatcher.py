@@ -18,4 +18,4 @@ class Dispatcher:
                 and split_routing_key[1] == MessagingConstants.TEAMS):
                 self.team_rating_change_handler.handle(body)
         else:
-            self.logger.log("Invalid message recived")
+            self.logger.warning_log("Invalid message recived")

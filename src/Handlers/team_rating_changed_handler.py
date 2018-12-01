@@ -11,7 +11,7 @@ class TeamRatingChangedHandler:
         self.data_provider = DataProvider()
 
     def handle(self, message):
-        self.logger.log("Team Rating Handler Handling Message")
+        self.logger.info_log("Team Rating Handler Handling Message")
 
         message = message.decode(MessagingConstants.ENCODING)
 
