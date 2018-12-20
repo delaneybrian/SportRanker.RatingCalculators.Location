@@ -18,6 +18,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Constants.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Configuration/Constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team_rating_changed_handler.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team_rating_changed_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Handlers/team_rating_changed_handler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -90,9 +100,9 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/data_provider.py" />
         <option value="$PROJECT_DIR$/rating_calculator.py" />
-        <option value="$PROJECT_DIR$/Configuration/Constants.py" />
         <option value="$PROJECT_DIR$/publisher.py" />
         <option value="$PROJECT_DIR$/Handlers/team_rating_changed_handler.py" />
+        <option value="$PROJECT_DIR$/Configuration/Constants.py" />
       </list>
     </option>
   </component>
@@ -811,14 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rating_calculator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -872,6 +874,14 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

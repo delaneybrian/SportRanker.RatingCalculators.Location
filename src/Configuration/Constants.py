@@ -1,7 +1,7 @@
 class RankingChangeType:
-    UNSET = 0,
-    TEAM = 1,
-    STATE = 2,
+    UNSET = 0
+    TEAM = 1
+    STATE = 2
     CITY = 3
 
 class RankingChangeConstants:
