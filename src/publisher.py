@@ -1,6 +1,7 @@
 import pika
 from Configuration.Constants import MessagingConstants
 from logger import Logger
+import time
 
 class Publisher:
 
@@ -25,3 +26,5 @@ class Publisher:
 
         self.logger.info_log(" [x] Sent %r:%r" % (routing_key, message))
         connection.close()
+
+        #time.sleep(5)
