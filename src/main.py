@@ -1,5 +1,7 @@
 from consumer import Consumer
 from logger import Logger
+import time
+
 
 consumer = Consumer()
 logger = Logger()
@@ -10,3 +12,4 @@ while(True):
         consumer.start_consumer()
     except:
         logger.warning_log("Error Running Consumer. Restarting...")
+        time.sleep(10000)
