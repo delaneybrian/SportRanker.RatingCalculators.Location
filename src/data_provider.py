@@ -9,7 +9,7 @@ class DataProvider:
         self.logger = Logger()
 
     def get_state_and_city_by_team_id(self, team_id):
-        url = "https://sports-rivals.appspot.com/api/teams/" + team_id
+        url = "https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/teams/" + team_id
 
         result = requests.get(url)
 
@@ -36,7 +36,7 @@ class DataProvider:
 
     def get_teams_for_city_by_id(self, city_id):
 
-        url = "https://sports-rivals.appspot.com/api/teams/search/findByCity?id=" + city_id
+        url = "https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/teams/search/findByCity?id=" + city_id
 
         cities_result = requests.get(url)
 
@@ -52,7 +52,7 @@ class DataProvider:
 
     def get_teams_for_state_by_id(self, state_id):
 
-        url = "https://sports-rivals.appspot.com/api/teams/search/findByState?id=" + state_id
+        url = "https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/teams/search/findByState?id=" + state_id
 
         states_result = requests.get(url)
 

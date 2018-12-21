@@ -17,7 +17,7 @@ class MessagingConstants:
     HOST = 'localhost'
     PORT = ''
 
-    NEW_FIXTURE_EXCHANGE = 'new_fixture_exchange'
+    NEW_FIXTURE_EXCHANGE = 'sportsrivals'
     NBA_RESULTS = 'results.nba'
     NFL_RESULTS = 'results.nfl'
     NHL_RESULTS = 'results.nhl'
@@ -34,7 +34,7 @@ class MessagingConstants:
     TEAMS = 'team'
     LOCATIONS = 'location'
 
-    RATING_CHANGE_EXCHANGE = 'rating_change_exchange'
+    RATING_CHANGE_EXCHANGE = 'sportsrivals'
     TEAM_RATING_CHANGE = 'ratings.team'
     LOCATION_RATING_CHANGE = 'ratings.location'
     ALL_RATINGS_CHANGE = 'ratings.*'
