@@ -23,7 +23,7 @@ class Publisher:
 
         properties = pika.BasicProperties(content_type='text/plain')
 
-        channel.basic_publish(exchange='topic_logs',
+        channel.basic_publish(exchange=MessagingConstants.RATING_CHANGE_EXCHANGE,
                               routing_key=routing_key,
                               body=message,
                               properties=properties)
