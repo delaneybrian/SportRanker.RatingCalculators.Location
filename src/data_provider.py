@@ -1,4 +1,4 @@
-from Configuration.Constants import TeamConstants
+import urllib3
 import requests
 from logger import Logger
 import json
@@ -11,28 +11,41 @@ class DataProvider:
     def get_state_and_city_by_team_id(self, team_id):
         url = "https://sportsrivals.cronelea.ie/sportsrivals-data-service/api/teams/" + team_id
 
-        result = requests.get(url)
+        try:
+            result = requests.get(url)
 
-        if (result.status_code == 200):
+            if (result.status_code == 200):
 
-            team_dict = json.loads(result.text)
+                team_dict = json.loads(result.text)
 
-            state_url = team_dict["_links"]["state"]['href']
-            city_url = team_dict["_links"]["city"]['href']
+                state_url = team_dict["_links"]["state"]['href']
+                city_url = team_dict["_links"]["city"]['href']
 
-            state_result = requests.get(state_url)
-            city_result = requests.get(city_url)
+                state_result = requests.get(state_url)
+                city_result = requests.get(city_url)
 
-            if (state_result.status_code == 200 and
-                city_result.status_code == 200):
+                if (state_result.status_code == 200 and
+                    city_result.status_code == 200):
 
-                state_dict = json.loads(state_result.text)
-                city_dict = json.loads(city_result.text)
+                    state_dict = json.loads(state_result.text)
+                    city_dict = json.loads(city_result.text)
 
-                return state_dict["id"], city_dict["id"]
+                    return state_dict["id"], city_dict["id"]
 
-        else:
-            self.logger.info_log("Error Getting Team From Api Id: " + team_id)
+            else:
+                self.logger.info_log("Error Getting Team From Api Id: " + team_id)
+        except TimeoutError:
+            self.logger.info_log("REST request has timed out")
+        except urllib3.exceptions.NewConnectionError:
+            self.logger.info_log("REST new connection error")
+        except urllib3.exceptions.MaxRetryError:
+            self.logger.info_log("REST max retry error")
+        except requests.exceptions.ConnectionError:
+            self.logger.info_log("REST connection error")
+        except:
+            self.logger.info_log("REST error")
+
+
 
     def get_teams_for_city_by_id(self, city_id):
 
