@@ -9,8 +9,6 @@ class Dispatcher:
         self.team_rating_change_handler = TeamRatingChangedHandler()
 
     def recieve_message(self, routing_key, body):
-
-        print("dispatcher recieved")
         split_routing_key = routing_key.split('.')
 
         if (len(split_routing_key) == 2):

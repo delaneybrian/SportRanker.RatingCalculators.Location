@@ -7,8 +7,6 @@ class RatingCalculator:
 
     def calculate_new_location_rating(self, team_id, team_rating, ratings_by_team_id):
 
-        print("caluclate new rating")
-
         total_rating = 0
         num_teams = 0
 
