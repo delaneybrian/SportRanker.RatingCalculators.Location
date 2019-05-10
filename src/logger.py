@@ -4,9 +4,9 @@ import os
 class Logger:
 
     def __init__(self):
-        if not os.path.exists('logs/team.txt'):
-            with open('logs/team.txt', 'w'): pass
-        logging.basicConfig(filename=r"logs/team.txt", level=logging.INFO)
+        if not os.path.exists('team.txt'):
+            with open('team.txt', 'w'): pass
+        logging.basicConfig(filename=r"team.txt", level=logging.INFO)
 
     def debug_log(self, message):
         logging.debug(message)
